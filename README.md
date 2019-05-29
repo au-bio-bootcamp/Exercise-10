@@ -1,7 +1,7 @@
 # Small Group Exercise #10:
 EMBOSS and Scripting
 
-In this exercise you are going to take multiple nucleotide sequence data files in GenBank format, reformat them, translate to amino acid sequence, determine codon usage and look for a specific protein motif.  To do this you are going to blend together tools from EMBOSS with your working knowledge of shell commands and scripting. In this example, you will need to track files and file extensions on your own. First we will start with a single file.
+In this exercise you are going to take multiple nucleotide sequence data files in GenBank format, reformat them, translate to amino acid sequence data, determine codon usage and look for a specific protein motif.  To do this you are going to blend together tools from EMBOSS with your working knowledge of shell commands and scripting. In this example, you will need to track files and file extensions on your own. First we will start with a single file.
 
 1. Explore the documentation EMBOSS at the SourceForge website and note the wide range of tools”
 * http://emboss.sourceforge.net
@@ -68,7 +68,7 @@ This approach will grab the file name and stick in a variable called FILE. You c
 
 12.  OPTION: you can either try and write the complete script and then execute it on all the files, or you can add one or a few steps and test it on a one or two files at a time before running the entire thing. Which do you think if the wiser way to go? That is correct! Make a directory for testing with one or two of the files ending in .gb (from step 7) and test your script in there. Remember to `chmod` before executing. You can execute at the prompt. You do NOT need to submit these to the queue.
 
-13. Add the commands from steps 7b, 7c, 7d, and 7e as needed. This will all go be for you reach “done”. For these commands, remember that the output for 7a will be the input for 7b. Also the output for 7b will be the input for 7c, etc. To help with this, use your file extensions for output files in a smart way.
+13. Add the commands from steps 7.ii, 7.iii, 7.iv, and 7.v as needed. This will all go be for you reach “done”. For these commands, remember that the output for 7a will be the input for 7b. Also the output for 7b will be the input for 7c, etc. To help with this, use your file extensions for output files in a smart way.
 
 14. Test your script. Once it is working move it to the folder with all 6 Tubeworm GenBank files and execute.
 
