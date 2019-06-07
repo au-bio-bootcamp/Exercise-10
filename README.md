@@ -12,7 +12,7 @@ In this exercise you are going to take multiple nucleotide sequence data files i
 3.  Make a new directory in your HOME called `emboss` and move the file `/home/shared/biobootcamp/data/Lamellibrachia_luymesi_MITOS_data/Lamellibrachia_luymesi_mtDNA_genome.gb` into it. Look at the context of this file. This is GenBank format where the features are annotated but the file is in a format that is not easy to manipulate. You want to **pull out the codon features (CDS) from this file**.
     1.  EMBOSS has a program for helping find utilities within the EMBOSS software suite. We want a program that will help use extract features from the Genbank file. Type `wossname` and try the keyword `feature` when prompted. Does one of these utilities look useful for extracting features?
     2. Try `extractfeat –h`. Use this command to extract the codon features from the Genbank file. Use the flags `-type CDS –join`. You will have to sort out the input and output flags.
-    3. Check your output file and verify it is in fasta format and verify the sequences are only CDs (hint: look at headers). The rename the file with the proper extension (.fasta) if needed. You can use the `mv` or `rename` command - syntax: `rename current_pattern desired_pattern file`
+    3. Check your output file and verify it is in fasta format and verify the sequences are only CDSs (hint: look at headers). Then rename the file with the proper extension (.fasta) if needed. You can use the `mv` or `rename` command - syntax: `rename current_pattern desired_pattern file`
     4. Next modify the fasta headers (text after ‘>’) of these files to `Lamellibrachia_luymesi_CDS`. Which command allows substitutions? Use cheat sheet and/or Google if needed to figure out format of the regular expression.
 
 4. Translate nucleotide data to amino acid data
@@ -23,7 +23,9 @@ In this exercise you are going to take multiple nucleotide sequence data files i
     5. Fortunately, our data is in frame but that is not always the case. Try the three following EMBOSS commands:
         ```bash
         sixpack –sequence <INFILE> -table 5 -outseq <OUTFILE>.sixpack.seqs -outfile <OUTFILE>.sixpack.out
+        
         showorf -sequence <INFILE> -frames 1,2,3 -table 5 -outfile <OUTFILE>.showorf
+        
         showorf -sequence <INFILE> -frames 1,2,3,4,5,6 -table 5 -outfile <OUTFILE>.showorf
         ```
 
